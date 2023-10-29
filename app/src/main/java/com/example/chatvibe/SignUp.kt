@@ -60,7 +60,7 @@ class SignUp : AppCompatActivity() {
 
     }
     private fun addUserToDatabase(name: String,email: String,uid: String){
-        mDbRef = FirebaseDatabase.getInstance().getReference()
+        mDbRef = FirebaseDatabase.getInstance("https://console.firebase.google.com/u/2/project/chatapplication-f0487/database/chatapplication-f0487-default-rtdb/data/~2F").getReference()
 
         mDbRef.child("user").child(uid).setValue(User(name,email,uid))
 
